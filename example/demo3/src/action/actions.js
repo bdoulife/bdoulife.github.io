@@ -18,7 +18,7 @@ function receiveData(arr) {
 }
 export function fetchDataIfNeeded(){
 	return (dispatch,getState) => {
-		fetch('../src/json/queryByqueryBusinessList.json')
+		fetch('./src/json/queryByqueryBusinessList.json')
 			.then(response => response.json())
 			.then(json => { dispatch(receiveData(json.data.shops))})
 	}

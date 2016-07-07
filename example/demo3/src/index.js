@@ -20,7 +20,7 @@ let dftData = [{
 		shopName:'title33333333',
 		address:'描述33333'
 	}];
-let store = createStorer({'delItem':dftData,'getInitalData':[]});
+let store = createStorer({'del':dftData,'initalData':[]});
 render(
 	<Provider store = {store}><ListItem /></Provider>,
 	ele

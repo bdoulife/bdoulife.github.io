@@ -10,11 +10,7 @@ class ListItem extends Component{
 	}
 	render(){
 		const {dispatch ,listData} = this.props;
-		let _list = listData.delItem
-		if(listData.getInitalData.length){
-			_list = listData.getInitalData;
-		}
-		var list = _list.map(function(item,idx){
+		var list = listData.map(function(item,idx){
 			return <Item item={item} 
 				onClick={ () => dispatch(delItem(idx)) } 
 				key={idx} />
@@ -29,7 +25,7 @@ class ListItem extends Component{
 
 function test(state){
 	return {
-		listData:state
+		listData:state.initalData.length ? state.initalData : state.del
 	}
 }
 
