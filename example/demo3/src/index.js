@@ -1,13 +1,14 @@
 import React,{ Component } from 'react';
 import {render} from 'react-dom';
-import ListItem from './components/ListItem';
+import App from './container/App'
 import {Provider} from 'react-redux';
 
 import { createStorer } from './store/createStore';
 
 let ele = document.getElementById('app')
 
-let dftData = [{
+let dftData = [
+	{
 		img_mid_url:'./src/img/demo1.jpg',
 		shopName:'title11111',
 		address:'描述1111'
@@ -19,9 +20,11 @@ let dftData = [{
 		img_mid_url:'./src/img/demo3.png',
 		shopName:'title33333333',
 		address:'描述33333'
-	}];
+	}
+];
 let store = createStorer({'del':dftData,'initalData':[]});
+
 render(
-	<Provider store = {store}><ListItem /></Provider>,
+	<Provider store = {store}><App /></Provider>,
 	ele
 );
