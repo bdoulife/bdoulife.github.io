@@ -7,16 +7,20 @@ class App extends Component{
 	constructor(props){
 		super(props);
 		this.itemClick = this.itemClick.bind(this);
+		this.showAllClick = this.showAllClick.bind(this);
 	}
 	componentDidMount(){
 		this.props.dispatch(fetchDataIfNeeded());
 	}
+	showAllClick(){
+		this.props.dispatch(fetchDataIfNeeded());
+	}
 	itemClick(idx){
-		this.props.dispatch(delItem(idx))
+		this.props.dispatch(delItem(idx));
 	}
 	render(){
 		return(
-			<ListItem listData={this.props.listData} itemClick={this.itemClick}  />	
+			<ListItem listData={this.props.listData} itemClick={this.itemClick} showAllClick={this.showAllClick} />	
 		)
 	}
 }

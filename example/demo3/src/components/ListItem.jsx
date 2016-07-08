@@ -11,9 +11,12 @@ class ListItem extends Component{
 				key={idx} />
 		});
 		return (
-			<ul>
-				{list}
-			</ul>
+			<div>
+				<button onClick={this.props.showAllClick}>显示全部</button>
+				<ul>
+					{list}
+				</ul>
+			</div>
 		)
 	}
 }
