@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import './MainRight.scss';
 
-export default class Header extends Component{
+export default class MainRight extends Component{
 	render(){
 		return(
-			<div>
+			<div className="right-wrap">
 				<h1>北斗前端技术指南</h1>
 				<a href="https://github.com/bdoulife/bdoulife.github.io">项目地址</a>
 				<h2>应用技术</h2>

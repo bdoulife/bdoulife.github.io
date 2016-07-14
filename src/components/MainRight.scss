@@ -1,0 +1,18 @@
+.right-wrap{
+	margin-left: 160px;
+	color: #333;
+	padding: 20px;
+	h1,h2{
+		font-size: 16px;
+	}
+	a{
+		display: inline-block;
+		padding: 2px 10px;
+		color: #333;
+		&:hover{
+			background-color:#ff6262;
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+}
